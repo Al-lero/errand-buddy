@@ -11,16 +11,18 @@
     "start": "vite"
   },
   "dependencies": {
-    "esbuild-plugin-jsx": "^1.0.1",
+    "errand-buddy-application": "file:",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "esbuild-plugin-jsx": "^1.0.1",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
