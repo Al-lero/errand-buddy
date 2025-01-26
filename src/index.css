@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color: #ffffff;
 }
 
 /* Styling for navigation links */
@@ -11,6 +12,6 @@ html {
 }
 
 .nav-menu a:hover, .nav-link:hover {
-    color: #ff6347; /* Hover effect */
+    color: #ff6347;
 }
 
