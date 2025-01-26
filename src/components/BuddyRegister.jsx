@@ -9,7 +9,7 @@ const BuddyRegister = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
-    const [location, setLocation] = useState('SURULERE');
+    const [location, setLocation] = useState('SURULERE'); // Default value
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,7 +22,7 @@ const BuddyRegister = () => {
             password,
             email,
             address,
-            location,
+            location, // Send the selected location value to the database
         };
 
         try {
@@ -92,7 +92,16 @@ const BuddyRegister = () => {
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                 />
-                <input type="text" placeholder="Location" value={location} readOnly />
+
+                {/* Location dropdown */}
+                <select value={location} onChange={(e) => setLocation(e.target.value)}>
+                    <option value="SURULERE">SURULERE</option>
+                    <option value="YABA">YABA</option>
+                    <option value="APAPA">APAPA</option>
+                    <option value="MUSHIN">MUSHIN</option>
+                    <option value="FESTAC">FESTAC</option>
+                </select>
+
                 <button type="submit">Register Buddy</button>
             </form>
         </section>

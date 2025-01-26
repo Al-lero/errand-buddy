@@ -49,6 +49,19 @@
     transition: background-color 0.3s ease;
 }
 
+.register-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.register-form select:focus {
+    border-color: #007bff;
+}
+
 .register-form button:hover {
     background-color: #891904;
 }
