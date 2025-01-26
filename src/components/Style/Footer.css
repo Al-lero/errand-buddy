@@ -1,60 +1,77 @@
+/* Footer Styling */
 .footer-container {
-    background-color:#2596be;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 20px;
-    flex-wrap: wrap; 
-  }
+  background-color: #0c0000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+  border-top: 5px solid #ff6347;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
+.footer-box {
+  padding: 20px;
+  width: 22%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  /*box-shadow: 0 8px 16px rgba(228, 227, 227, 0.2);*/
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-box h2 {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-box img {
+  margin-top: 10px;
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.footer-box a {
+  color: #ff6347;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-box a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.footer-box .location-icon {
+  font-size: 30px;
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .footer-box {
-    border: 1px solid#be4d25 ; 
-    padding: 20px;
-    width: 22%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    box-shadow: 0px 8px 16px rgba(228, 227, 227, 0.2);
+    width: 45%;
+    margin-bottom: 20px;
   }
-  
-  .footer-box h2 {
-    font-size: 16px;
-    font-style: italic;
-  }
+}
 
-  .footer-box img {
-    margin-top: 5px;
-    width: 10vw;
-    height: auto;
-    border-radius: 50%;
+@media (max-width: 480px) {
+  .footer-box {
+    width: 100%;
+    margin-bottom: 20px;
   }
-  
-
-  .footer-box a {
-    color: navy;
-    text-decoration: none;
-  }
-  
-  .footer-box a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-
-  @media (max-width: 768px) {
-    .footer-box {
-      width: 45%; 
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer-box {
-      width: 100%; 
-      margin-bottom: 20px;
-    }
-  }
-  
+}

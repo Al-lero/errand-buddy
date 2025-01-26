@@ -1,0 +1,55 @@
+/* Mission and Vision Container */
+.mission-vision-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    /*background-color: #f4f4f4;*/
+    margin: 20px 0;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Mission and Vision Boxes */
+.mission-box, .vision-box {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mission-box h2, .vision-box h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.mission-box p, .vision-box p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mission-box, .vision-box {
+        flex: none;
+        width: 100%;
+    }
+
+    .mission-box h2, .vision-box h2 {
+        font-size: 22px;
+    }
+
+    .mission-box p, .vision-box p {
+        font-size: 14px;
+    }
+}

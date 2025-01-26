@@ -11,6 +11,8 @@
     "start": "vite"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "errand-buddy-application": "file:",
     "path": "^0.12.7",
     "react": "^18.3.1",
