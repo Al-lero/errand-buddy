@@ -1,102 +1,134 @@
+/* Header Container */
 .header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 20px;
-    background-color:rgb(58, 58, 242); 
-    border-bottom: 2px solid black;
-    box-sizing: border-box;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-    position: sticky;
-    border-radius: 10px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
 
-  .logo {
-    width: 80px;
-    height: auto;
+/* Logo Styling */
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ff6347; /* Hover effect */
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.dropdown-button:hover {
+  color: #ff6347;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* Enquiry Button */
+.enquiry-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.enquiry-button:hover {
+  background-color: #d45d41;
+}
+
+/* Service Link */
+.service-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.service-link:hover {
+  color: #ff6347;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .nav-menu a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .nav-menu a:hover {
-    color: #56b26e; 
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
   }
 
-  .dropdown-container {
-    position: relative;
-    display: inline-block;
+  .dropdown-button, .service-link, .enquiry-button {
+    width: 100%;
+    text-align: left;
   }
-  
-  .dropdown-button {
-    background: none;
-    border: none;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-  }
-  
-  .dropdown-button:after {
-    content: '▼';
-    margin-left: 5px;
-    font-size: 0.7rem;
-    transition: transform 0.3s;
-  }
-
-  .dropdown-button:hover:after {
-    transform: rotate(180deg); 
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    min-width: 160px;
-  }
-  
-  .dropdown-container:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  
-  .agric-kids-link {
-    color: #fa4733;
-  }
-
-  .enquiry-button {
-    background-color: #8bc53f;
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid #8bc53f;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .enquiry-button:hover {
-    background-color: #76a52f;
-  } 
+}
